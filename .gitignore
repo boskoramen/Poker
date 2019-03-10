@@ -1,0 +1,7 @@
+# Directories to ignore
+
+# Specific files to ignore
+Makefile
+*~
+*#
+__pycache__
