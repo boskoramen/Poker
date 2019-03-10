@@ -5,10 +5,12 @@ class Card:
     
     suit = None
     value = None
-
-    def __init__(self, suit, value):
+    hidden = None
+    
+    def __init__(self, suit, value, hidden=False):
         self.suit = suit
         self.value = value
+        self.hidden = hidden
         
 
     def __str__(self):
@@ -21,3 +23,6 @@ class Card:
     
     def getValue(self):
         return self.value
+
+    def isHidden(self):
+        return self.hidden
