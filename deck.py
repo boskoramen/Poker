@@ -1,4 +1,6 @@
 # Import statements
+import random
+
 from card import Card
 import references
 
@@ -15,6 +17,9 @@ class Deck:
                 self.cards.append(card)
 
                 
-    def test(self):
-        for card in self.cards:
-            print(str(card))
+    def shuffle(self):
+        random.shuffle(cards)
+
+
+    def draw(self):
+        return cards.pop()
