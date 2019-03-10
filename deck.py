@@ -1,38 +1,25 @@
+# Import statements
+import random
+
 from card import Card
-
-suits = {
-    'HEARTS':0,
-    'DIAMONDS':1,
-    'SPADES':2,
-    'CLUBS':3,
-}
-
-values = {
-    'ACE':1,
-    '2':2,
-    '3':3,
-    '4':4,
-    '5':5,
-    '6':6,
-    '7':7,
-    '8':8,
-    '9':9,
-    '10':10,
-    'JACK':11,
-    'QUEEN':12,
-    'KING':13
-}
+import references
 
 class Deck:
-       
+    
     cards = None
 
     def __init__(self):
-        cards = []
-        
-        for suit in suits:
-            for value in values:
-                cards.append(Card(suit, value))
+        self.cards = []
 
-    def test(self):
-        print(self.cards)
+        for suit in references.suits:
+            for value in references.values:
+                card = Card(references.suits[suit], references.values[value])
+                self.cards.append(card)
+
+                
+    def shuffle(self):
+        random.shuffle(cards)
+
+
+    def draw(self):
+        return cards.pop()
